@@ -51,6 +51,9 @@ Login.findOne({}, function(err, result) {
             } else if (result.dimension === 2) {
                 HOST = 'chat.dt.funcom.com';
                 PORT = 7109;
+            } else if (result.dimension === 6) {
+                HOST = 'chat.d1.funcom.com';
+                PORT = 7106;
             } else {
                 winston.warn('Invalid Dimension Selected');
                 process.exitCode = 1;
@@ -87,6 +90,9 @@ Login.findOne({}, function(err, result) {
         } else if (result.dimension === 2) {
             HOST = 'chat.dt.funcom.com';
             PORT = 7109;
+         } else if (result.dimension === 6) {
+            HOST = 'chat.d1.funcom.com';
+            PORT = 7106;
         } else {
             winston.info('Invalid Dimension Selected');
             process.exitCode = 1;
@@ -135,10 +141,10 @@ var schema = {
             required: true
         },
         dimension: {
-            description: 'Choose dimension (1 - Rubi-Ka, 2 - Test)',
+            description: 'Choose dimension (1 - Rubi-Ka, 2 - Test, 6 - Rubi-Ka 2019)',
             type: 'number',
-            pattern: /^[1-2]+$/,
-            message: 'Numbers only, 1 OR 2',
+            pattern: /^[1-6]+$/,
+            message: 'Numbers only, 1, 2 OR 6',
             default: 1
         },
         owner: {
