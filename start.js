@@ -74,7 +74,7 @@ Login.findOne({}, function(err, result) {
                 }
                 winston.info('Config saved!');
 
-                GlobalFn.Login = result.username;
+                GlobalFn.Login = result.user;
                 GlobalFn.Pass = result.password;
                 GlobalFn.botname = _.capitalize(result.botname);
                 GlobalFn.owner = _.capitalize(result.owner);
