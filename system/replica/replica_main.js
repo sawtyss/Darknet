@@ -55,7 +55,7 @@ process.on('SIGINT', function() {
 const start = startBot;
 const GlobalFn = {
     getPlayerData: function(userId, userName) {
-        request('http://people.anarchy-online.com/character/bio/d/5/name/' + userName + '/bio.xml', function(error, response, body) {
+        request('http://people.anarchy-online.com/character/bio/d/6/name/' + userName + '/bio.xml', function(error, response, body) {
             if (!error && response.statusCode == 200) {
                 if (body.length > 20) { // check if xml is empty
                     parseString(body, function(err, result) {
@@ -175,7 +175,7 @@ Replica.findOneAndUpdate({
     GlobalFn.replicaname = result.replicaname;
     GlobalFn.Login = result.username;
     GlobalFn.Pass = result.password;
-    start('chat.d1.funcom.com', 7105);
+    start('chat.d1.funcom.com', 7106);
 }).catch(function(err) {
     winston.error(err);
 });

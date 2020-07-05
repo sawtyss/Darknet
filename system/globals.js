@@ -38,7 +38,7 @@ const GlobalFn = {
     },
     getPlayerData: function(userId, userName) {
       winston.debug('Retrieving info for ' + userName + ' with ID ' + userId);
-        request('http://people.anarchy-online.com/character/bio/d/5/name/' + userName + '/bio.xml', function(error, response, body) {
+        request('http://people.anarchy-online.com/character/bio/d/6/name/' + userName + '/bio.xml', function(error, response, body) {
             if (!error && response.statusCode == 200) {
                 if (body.length > 20) { // check if xml is empty
                     parseString(body, function(err, result) {
