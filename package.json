@@ -10,7 +10,7 @@
     "express": "^4.14.0",
     "lodash": "^4.17.2",
     "moment": "^2.17.1",
-    "mongoose": "^4.7.2",
+    "mongoose": "^5.9.21",
     "prompt": "^1.0.0",
     "request": "^2.79.0",
     "rfr": "^1.2.3",
