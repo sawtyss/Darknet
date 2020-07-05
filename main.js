@@ -463,6 +463,13 @@ incMessage.on('pm', function(userId, message) {
                             }
                           });
                         }
+                    } else {
+                        winston.error("Failed to obtain player info. Assuming this is a register command and proceeding with null player info.");
+                        let args = [];
+                        for (let i = 1; i < message.split(' ').length; i++) {
+                            args.push(message.split(' ')[i]);
+                        }
+                        Cmd[cmdName](userId, args);
                     }
                 }).catch(function(err) {
                 winston.error('Private Message: ' + err);
