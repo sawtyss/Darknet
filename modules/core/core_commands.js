@@ -1144,8 +1144,7 @@ const ValidSettings = {
 
 
 
-var about =
-about += '<center> <font color=#FFFF00> :::Tradesnet::: </font> </center> \n\n';
+var about = '<center> <font color=#FFFF00> :::Tradesnet::: </font> </center> \n\n';
 about += 'Tradesnet is a RK2019-specific trading network based on Darknet by Nepherius.\n'
 about += 'In case of any issues with the way bot is running, or to report bugs please contact'
 about += ' the current bot maintainer.\n'
