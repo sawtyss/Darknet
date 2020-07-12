@@ -1142,15 +1142,22 @@ const ValidSettings = {
   pvmlock: 'pvmLockDuration'
 };
 
-var about = '<center> <font color=#FFFF00> :::Nephbot - Darknet::: </font> </center> \n\n';
-about += '<font color=#00FFFF>Version:</font> 0.3.5 \n';
-about += '<font color=#00FFFF>By:</font> Nepherius \n';
+
+var about =
+about += '<center> <font color=#FFFF00> :::Tradesnet::: </font> </center> \n\n';
+about += 'Tradesnet is a RK2019-specific trading network based on Darknet by Nepherius.\n'
+about += 'In case of any issues with the way bot is running, or to report bugs please contact'
+about += 'the current bot maintainer.'
+about += '<font color=#00FFFF>Maintained by:</font> sawtyss@gmail.com'
+about += '<font color=#00FFFF>Discord:</font> Sawtyss#1158'
+about += '<font color=#00FFFF>Version:</font> 0.3.5 \n';0
+about += '<font color=#00FFFF>Bot author:</font> Nepherius \n';
 about += '<font color=#00FFFF>On:</font>' + process.platform + '\n';
 about += '<font color=#00FFFF>In:</font> Node v' + process.versions.node + '\n';
 about += '<font color=#00FFFF>With:</font> MongoDB(Mongoose) \n';
-about += '<font color=#00FFFF>Contact:</font> nepherius@live.com \n';
-about += '<font color=#00FFFF>Source Code</font> https://github.com/Nepherius/Darknet \n\n';
-
+about += '<font color=#00FFFF>Contact (author):</font> nepherius@live.com \n';
+about += '<font color=#00FFFF>Original source code</font> https://github.com/Nepherius/Darknet \n';
+about += '<font color=#00FFFF>RK2019 source code (fork):</font> https://github.com/sawtyss/Darknet \n\n';
 about += '<font color=#00FFFF>Special Thanks:</font> To all the people that worked on the original AO Chat Bots, Nephbot would not be possible without them.    \n';
 
 helpMsg = '<center> <font color=#FFFF00> :::General Help::: </font> </center> \n\n';
@@ -1158,12 +1165,12 @@ helpMsg += '<font color=#00FFFF> [arg] <- This is an optional argument  </font>'
 helpMsg += '<font color=#00FFFF>help [command name]</font> - Display general help or for a specific command.' + '\n';
 helpMsg += '<font color=#00FFFF>about </font> - General Bot info.' + '\n';
 helpMsg += '<font color=#00FFFF>cmdlist </font> - List all commands.' + '\n';
-helpMsg += '<font color=#00FFFF>join </font> - Join private channel, while on this channel you will no longer receive PM from Darknet.' + '\n';
-helpMsg += '<font color=#00FFFF>rules </font> - List Darknet rules.' + '\n';
+helpMsg += '<font color=#00FFFF>join </font> - Join private channel, while on this channel you will no longer receive PM from Tradesnet.' + '\n';
+helpMsg += '<font color=#00FFFF>rules </font> - List Tradesnet rules.' + '\n';
 helpMsg += '<font color=#00FFFF>status </font> - Display your channel subscription status.' + '\n';
 helpMsg += '<font color=#00FFFF>autoinvite [on|off]</font> - See your current autoinvite status or turn on/off.' + '\n';
 helpMsg += '<font color=#00FFFF>history [channel name]</font> - List last 20 broadcasts, optionally for a specific channel.' + '\n';
-helpMsg += '<font color=#00FFFF>stats </font> - Display Darknet statistics.' + '\n';
+helpMsg += '<font color=#00FFFF>stats </font> - Display Tradesnet statistics.' + '\n';
 helpMsg += '<font color=#00FFFF>subscribe < channel name|all > </font> - Subscribe to a channel or all.' + '\n';
 helpMsg += '<font color=#00FFFF>unsubscribe < channel name|all > </font> - Unsubscribe from a channel or all.' + '\n';
 helpMsg += '<font color=#00FFFF>general < msg > </font> - Send a general message.' + '\n';
