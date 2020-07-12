@@ -1143,6 +1143,7 @@ const ValidSettings = {
 };
 
 
+
 var about =
 about += '<center> <font color=#FFFF00> :::Tradesnet::: </font> </center> \n\n';
 about += 'Tradesnet is a RK2019-specific trading network based on Darknet by Nepherius.\n'
@@ -1179,25 +1180,24 @@ helpMsg += '<font color=#00FFFF>wts < msg > </font> - Send a message to Want To 
 helpMsg += '<font color=#00FFFF>wtb < msg > </font> - Send a message to Want To Buy channel.' + '\n';
 helpMsg += '<font color=#00FFFF>pvm < msg > </font> - Send a message to PVM channel.' + '\n';
 
-var rules = '<center> <font color=#FFFF00> :::Darknet Rules::: </font> </center> \n\n';
+var rules = '<center> <font color=#FFFF00> :::Tradesnet Rules::: </font> </center> \n\n';
 rules += '<font color=#00FFFF> - Personal issues, accusations of players or organizations, profanity and jokes are not allowed!</font> \n';
-rules += '<font color=#FF0000> - DRAMA</font><font color=#00FFFF> will not be tolerated, start it and you get banned, participate and at the very least you will get a temp lock and a warning added to your account!!</font> \n';
-rules += '<font color=#00FFFF> - Do NOT use any channel for chatting, you have PM for that.</font> \n';
-rules += '<font color=#00FFFF> - The only language allowed is English!</font> \n';
-rules += '<font color=#00FFFF> - DO NOT USE ALTS TO GET AROUND LOCK TIMERS!This will result in a ban!</font> \n\n';
+rules += '<font color=#00FFFF>Please respect other users of the bot, and do not cause any unnecessary drama</font> \n';
+rules += '<font color=#00FFFF> - Do NOT use any channel for chatting, you have private messages for that.</font> \n';
+rules += '<font color=#00FFFF> - DO NOT use alts to get around the channel lock. If found out it will result in a ban.</font> \n\n';
 rules += '<font color=#FFC94D> WTB Channel: </font>';
-rules += '<font color=#00FFFF>If you Want to Buy items with YesDrop Flag your message goes here! \nOptionally if you are buying regular items and NoDrop items you can post A SINGLE messages on this channel instead 2 messages, one on wtb channel and one on lr channel.</font> \n';
+rules += '<font color=#00FFFF>If you Want to Buy items with YesDrop Flag your message goes here.</font> \n';
 rules += '<font color=#FFC94D > WTS Channel: </font>';
-rules += '<font color=#00FFFF>If you Want to Sell items with YesDrop Flag your message goes here!</font> \n';
+rules += '<font color=#00FFFF>If you Want to Sell items with YesDrop Flag your message goes here.</font> \n';
 rules += '<font color=#FFC94D > Lootrights Channel: </font>';
-rules += '<font color=#00FFFF>If you Want to Buy/Sell items with NoDrop Flag your message goes here!</font> \n';
+rules += '<font color=#00FFFF>If you Want to Buy/Sell items with NoDrop Flag your message goes here.</font> \n';
 rules += '<font color=#FFC94D > PVM Channel: </font>';
-rules += '<font color=#00FFFF>If you want to expand/form a team for that super-hard instance your message goes here!</font> \n';
+rules += '<font color=#00FFFF>If you want to expand/form a team for that super-hard instance your message goes here.</font> \n';
 rules += '<font color=#FFC94D > General Channel: </font>';
-rules += '<font color=#00FFFF>For any other game related messages that don\'t match the other channels post here!</font> \n';
+rules += '<font color=#00FFFF>For any other game related messages that don\'t match the other channels post here.</font> \n';
 rules += '<font color=#FFC94D > Private Group(Chat): </font>';
-rules += '<font color=#00FFFF> This chat only exists to provide an alternative for private messages, it should NOT be used for chatting. DO NOT send any messages on this chat or you WILL be Banned!\n\n';
-rules += '<font color=#FF0000>All bans are PERMANENT!</font> \n';
+rules += '<font color=#00FFFF> This chat only exists to provide an alternative for private messages. Using this channel to chat may result in a ban.\n\n';
+
 
 // Export core commands
 module.exports = coreCmd;
