@@ -1148,9 +1148,9 @@ var about =
 about += '<center> <font color=#FFFF00> :::Tradesnet::: </font> </center> \n\n';
 about += 'Tradesnet is a RK2019-specific trading network based on Darknet by Nepherius.\n'
 about += 'In case of any issues with the way bot is running, or to report bugs please contact'
-about += 'the current bot maintainer.'
-about += '<font color=#00FFFF>Maintained by:</font> sawtyss@gmail.com'
-about += '<font color=#00FFFF>Discord:</font> Sawtyss#1158'
+about += ' the current bot maintainer.\n'
+about += '<font color=#00FFFF>Maintained by:</font> sawtyss@gmail.com\n'
+about += '<font color=#00FFFF>Discord:</font> Sawtyss#1158\n'
 about += '<font color=#00FFFF>Version:</font> 0.3.5 \n';0
 about += '<font color=#00FFFF>Bot author:</font> Nepherius \n';
 about += '<font color=#00FFFF>On:</font>' + process.platform + '\n';
