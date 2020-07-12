@@ -1196,7 +1196,7 @@ rules += '<font color=#00FFFF>If you want to expand/form a team for that super-h
 rules += '<font color=#FFC94D > General Channel: </font>';
 rules += '<font color=#00FFFF>For any other game related messages that don\'t match the other channels post here.</font> \n';
 rules += '<font color=#FFC94D > Private Group(Chat): </font>';
-rules += '<font color=#00FFFF> This chat only exists to provide an alternative for private messages. Using this channel to chat may result in a ban.\n\n';
+rules += '<font color=#00FFFF>This chat only exists to provide an alternative for private messages. Using this channel to chat may result in a ban.\n\n';
 
 
 // Export core commands

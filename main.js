@@ -571,7 +571,7 @@ privgrp.on('join', function(userId) {
                     winston.error(err);
                 } else {
                     GlobalFn.PMUser(userId,
-                        'Chatting on this channel is strictly FORBIDDEN, failing to comply will result in a PERMANENT ban!', 'error');
+                        'Please refrain from chatting on this channel. Its only purpose is to receive messages from the trade bot.', 'error');
                     //send_PRIVGRP_MESSAGE(GlobalFn.botId, result._id.name + ' joined the chat');
                 }
             });
