@@ -404,9 +404,9 @@ global.send_PING = function() {
 
 // Private Messages
 incMessage.on('pm', function(userId, message) {
-    // Continue only if at least 60 seconds passed since login
+    // Continue only if at least 10 seconds passed since login
     // to prevent offline msg spam
-    if (process.hrtime(startTime)[0] > 60 && userId !== GlobalFn.botId) {
+    if (process.hrtime(startTime)[0] > 10 && userId !== GlobalFn.botId) {
         if (!message.match(/Away from keyboard/igm)) { // if message is afk reply stop here
             let cmdName = message.split(' ')[0].toLowerCase();
             Promise.join(
