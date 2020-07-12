@@ -34,7 +34,7 @@ let cmdList = [{
     help: 'about',
 }, {
     cmdName: 'rules',
-    description: 'Darknet rules.',
+    description: 'Rules.',
     help: 'rules',
 }, {
     cmdName: 'shutdown',
@@ -203,7 +203,7 @@ let cmdList = [{
     accessRequired: 1
 }, {
     cmdName: 'playerhistory',
-    description: 'Display your or another player\'s last 20 broadcass.',
+    description: 'Display your or another player\'s last 20 broadcasts.',
     help: 'playerhistory [player name]',
     accessRequired: 1
 }, {

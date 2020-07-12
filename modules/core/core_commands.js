@@ -71,7 +71,7 @@ const coreCmd = {
         winston.error(err);
         GlobalFn.PMUser(userId, 'Something went wrong, try again.', 'error');
       } else {
-        let cmdReply = '<center> <font color=#FFFF00> :::Darknet Command List::: </font> </center> \n\n';
+        let cmdReply = '<center> <font color=#FFFF00> :::Command List::: </font> </center> \n\n';
         for (let i = 0, len = result.length; i < len; i++) {
           cmdReply += '<font color=#00FFFF>Cmd name:</font> ' + _.capitalize(result[i].cmdName) + ' \n';
           cmdReply += '<font color=#00FFFF>Description:</font> ' + result[i].description + ' \n';
@@ -122,7 +122,7 @@ const coreCmd = {
         $gte: moment().subtract(30, 'days')
       }
     }), History.count(), History.count({'channel': 'general'}), History.count({'channel': 'wtb'}), History.count({'channel': 'wts'}), History.count({'channel': 'lr'}), History.count({'channel': 'pvm'}), Player.count({'banned': true}), function(members, online, chat, totalBroadcasts, general, wtb, wts, lr, pvm, totalBroadcastsAT, generalAT, wtbAT, wtsAT, lrAT, pvmAT, banned) {
-      let statsReply = '<center> <font color=#FFFF00> :::Darknet Statistics::: </font> </center> \n\n';
+      let statsReply = '<center> <font color=#FFFF00> :::Statistics::: </font> </center> \n\n';
       statsReply += '<img src=tdb://id:GFX_GUI_FRIENDLIST_SPLITTER>\n';
       statsReply += '<font color=#00FFFF>Total Members:</font>' + members + '\n';
       statsReply += '<font color=#00FFFF>Online Members:</font>' + online + '\n';
@@ -148,7 +148,7 @@ const coreCmd = {
       statsReply += '<img src=tdb://id:GFX_GUI_FRIENDLIST_SPLITTER>\n';
       statsReply += '<font color=#00FFFF>Uptime:</font> ' + moment.duration(process.uptime(), 'seconds').humanize() + ' \n';
       statsReply += '<img src=tdb://id:GFX_GUI_FRIENDLIST_SPLITTER>';
-      GlobalFn.PMUser(userId, GlobalFn.blob('Darknet Stats', statsReply));
+      GlobalFn.PMUser(userId, GlobalFn.blob('Stats', statsReply));
     }).catch(function(err) {
       winston.error('Statistics retrieval error: ' + err);
     });
@@ -382,7 +382,7 @@ const coreCmd = {
                   send_BUDDY_ADD(userId);
                 }
               });
-              GlobalFn.PMUser(userId, 'Welcome to Darknet, you have been subscribed to all channels, please take a look at our ' + GlobalFn.blob('Rules', rules) + ' and ' + GlobalFn.blob('Help.', helpMsg));
+              GlobalFn.PMUser(userId, 'Welcome to Tradesnet, you have been subscribed to all channels, please take a look at our ' + GlobalFn.blob('Rules', rules) + ' and ' + GlobalFn.blob('Help.', helpMsg));
             }
           });
         });
@@ -417,7 +417,7 @@ const coreCmd = {
                 send_BUDDY_ADD(userId);
               }
             });
-            GlobalFn.PMUser(userId, 'Welcome to Darknet ' + result.name + ', you have been subscribed to all channels, please take a look at our ' + GlobalFn.blob('Rules', rules) + ' and ' + GlobalFn.blob('Help.', helpMsg));
+            GlobalFn.PMUser(userId, 'Welcome to Tradesnet ' + result.name + ', you have been subscribed to all channels, please take a look at our ' + GlobalFn.blob('Rules', rules) + ' and ' + GlobalFn.blob('Help.', helpMsg));
           }
         });
       }
@@ -731,7 +731,7 @@ const coreCmd = {
         if (err) {
           winston.error(err);
         } else {
-          let historyMsg = '<center> <font color=#FFFF00> :::Darknet History::: </font> </center> \n\n';
+          let historyMsg = '<center> <font color=#FFFF00> :::History::: </font> </center> \n\n';
           for (let i = 0, len = result.length; i < len; i++) {
             historyMsg += '<font color=#00FFFF>' + _.capitalize(result[i].channel) + ': </font>';
             historyMsg += result[i].message + '<font color=#00FFFF> [' + result[i].name + ']</font> - ' + moment(result[i].createdAt).fromNow() + '\n';
@@ -745,7 +745,7 @@ const coreCmd = {
         if (err) {
           winston.error(err);
         } else {
-          let historyMsg = '<center> <font color=#FFFF00> :::Darknet History::: </font> </center> \n\n';
+          let historyMsg = '<center> <font color=#FFFF00> :::History::: </font> </center> \n\n';
           for (let i = 0, len = result.length; i < len; i++) {
             historyMsg += '<font color=#00FFFF>' + _.capitalize(result[i].channel) + ': </font>';
             historyMsg += result[i].message.replace(/[^\x00-\x7F]/gmi, '') + '<font color=#00FFFF> [' + result[i].name + ']</font> - ' + moment(result[i].createdAt).fromNow() + '\n\n';
@@ -760,7 +760,7 @@ const coreCmd = {
   },
   replicastatus: function(userId) {
     Replica.find({}, function(err, result) {
-      let repStatus = '<center> <font color=#FFFF00> :::Darknet Replicas Status::: </font> </center> \n\n';
+      let repStatus = '<center> <font color=#FFFF00> :::Replicas Status::: </font> </center> \n\n';
       for (let i = 0, len = result.length; i < len; i++) {
         repStatus += '<img src=tdb://id:GFX_GUI_FRIENDLIST_SPLITTER>\n';
         repStatus += '<font color=#00FFFF>Name: </font>' + result[i].replicaname + '\n';
@@ -883,7 +883,7 @@ const coreCmd = {
     }
   },
   admins: function(userId) {
-    GlobalFn.PMUser(userId, 'My master is [<a href="user://Wafflespower">Wafflespower</a>], feel free to contact him for any Darknet issues, suggestions or just general feedback.');
+    GlobalFn.PMUser(userId, 'My master is [<a href="user://Morphina">Morphina</a>], feel free to contact him for any Tradesnet issues, suggestions or just general feedback.');
   },
   lastseen: function(userId, args) {
     if (!args[0]) {
@@ -1111,13 +1111,13 @@ const coreCmd = {
       if (err) {
         winston.error(err);
       } else {
-        let adminListMsg = '<center> <font color=#FFFF00> ::: Darknet Admin List ::: </font> </center> \n\n';
+        let adminListMsg = '<center> <font color=#FFFF00> ::: Admin List ::: </font> </center> \n\n';
         for (let i = 0, len = result.length; i < len; i++) {
           adminListMsg += 'Name: <font color=#00FFFF>' + result[i].name + ' </font>\n';
           adminListMsg += 'Access Level: <font color=#00FFFF>' + result[i].accessLevel + ' </font>\n';
           adminListMsg += '<img src=tdb://id:GFX_GUI_FRIENDLIST_SPLITTER>\n\n';
         }
-        GlobalFn.PMUser(userId, GlobalFn.blob('Darknet Admin List', adminListMsg));
+        GlobalFn.PMUser(userId, GlobalFn.blob('Admin List', adminListMsg));
       }
     });
   }
