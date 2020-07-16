@@ -472,7 +472,7 @@ incMessage.on('pm', function(userId, message) {
                             Cmd[cmdName](userId, args);
                         } else {
                             winston.error('Failed to obtain player info for a non-register message. This might have been caused by a renamed character. Responding with error and discarding message.');
-                            GlobalFn.PMUser(userId, 'I was unable to obtain your player info from PoRK. Please try again. If you have renamed your character, you might not be able to use this box.', 'error');
+                            GlobalFn.PMUser(userId, 'There are no records for you character on this bot, and I was unable to obtain your player data from PoRK.\nIf you have not registered please use the !register command first.\nIf you have renamed your character, you might not be able to use this bot.\nIf this character has been created very recently, please allow up to 1 hour to populate the data in PoRK and try registering again.', 'error');
                         }
                     }
                 }).catch(function(err) {
