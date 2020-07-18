@@ -464,11 +464,11 @@ incMessage.on('pm', function(userId, message) {
                           });
                         }
                     } else {
-                        let args = [];
-                        for (let i = 1; i < message.split(' ').length; i++) {
-                            args.push(message.split(' ')[i]);
-                        }
-                        if (args[0] == 'register') {
+                        if(message.includes("register")) {
+                            let args = [];
+                            for (let i = 1; i < message.split(' ').length; i++) {
+                                args.push(message.split(' ')[i]);
+                            }
                             Cmd[cmdName](userId, args);
                         } else {
                             winston.error('Failed to obtain player info for a non-register message. This might have been caused by a renamed character. Responding with error and discarding message.');
